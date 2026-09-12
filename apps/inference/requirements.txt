@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+onnxruntime
+numpy
+rasterio
+scikit-image
+scipy
+huggingface_hub
+python-multipart
+pydantic-settings
+requests
+pyyaml
+Pillow
