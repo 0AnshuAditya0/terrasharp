@@ -84,7 +84,7 @@ export default function GeoTiffUploader() {
       onDragLeave={() => setDragging(false)}
       onDrop={onDrop}
       onClick={() => !isLoading && inputRef.current?.click()}
-      className={`surface-card relative border-dashed p-12 text-center cursor-pointer transition-all
+      className={`surface-card relative w-full border border-dashed p-12 text-center cursor-pointer transition-all
         ${dragging ? "border-primary bg-primary/10 shadow-[0_0_40px_rgb(0_229_160/0.1)]" : "border-border hover:border-primary hover:bg-secondary/50"}
         ${isLoading ? "pointer-events-none opacity-80" : ""}
         ${status === "error" ? "border-destructive/60" : ""}

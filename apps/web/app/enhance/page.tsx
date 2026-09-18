@@ -13,7 +13,6 @@ import SatelliteViewer from "@/components/viewer/SatelliteViewer";
 import { buildDownloadUrl } from "@/lib/api-client";
 import { POLL_INTERVAL_MS } from "@/lib/constants";
 import GeoTiffUploader from "@/components/upload/GeoTiffUploader";
-import CopernicusFetcher from "@/components/upload/CopernicusFetcher";
 
 function Skeleton({ className = "" }: { className?: string }) {
   return <div className={`animate-pulse rounded-md bg-secondary ${className}`} />;
@@ -47,10 +46,9 @@ function EnhancePageContent() {
   if (!jobId) {
     return (
       <div className="grid-atmosphere mx-auto max-w-7xl space-y-10 px-6 pb-24 pt-32 md:px-10">
-        <div className="max-w-3xl space-y-5 reveal-up"><p className="eyebrow">01 · Ingest a scene</p><h1 className="text-[clamp(3rem,6vw,6rem)] font-light uppercase leading-[0.92] tracking-[-0.045em] text-[#e5f3f5]">Start with a Sentinel-2 GeoTIFF.</h1><p className="max-w-2xl text-base leading-7 text-[#7896a2]">Upload a four-band image or request a scene from Copernicus. Your result will open here when processing is complete.</p></div>
-        <div id="docs" className="grid gap-8 lg:grid-cols-2">
+        <div className="max-w-3xl space-y-5 reveal-up"><p className="eyebrow">01 · Ingest a scene</p><h1 className="text-[clamp(3rem,6vw,6rem)] font-light uppercase leading-[0.92] tracking-[-0.045em] text-[#e5f3f5]">Start with a Sentinel-2 GeoTIFF.</h1><p className="max-w-2xl text-base leading-7 text-[#7896a2]">Upload a four-band image. Your result will open here when processing is complete.</p></div>
+        <div id="docs" className="w-full">
           <section className="space-y-5 reveal-up reveal-delay-1"><div><p className="eyebrow mb-2">Local source</p><h2 className="text-2xl font-light uppercase tracking-[-0.02em] text-[#e5f3f5]">Upload GeoTIFF</h2><p className="mt-2 text-sm text-[#7896a2]">Use a local four-band Sentinel-2 scene.</p></div><GeoTiffUploader /></section>
-          <section className="space-y-5 reveal-up reveal-delay-2"><div><p className="eyebrow mb-2">Remote source</p><h2 className="text-2xl font-light uppercase tracking-[-0.02em] text-[#e5f3f5]">Fetch from Copernicus</h2><p className="mt-2 text-sm text-[#7896a2]">Request imagery by coordinates and date.</p></div><CopernicusFetcher /></section>
         </div>
       </div>
     );

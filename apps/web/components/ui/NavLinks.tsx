@@ -7,7 +7,9 @@ import { usePathname } from "next/navigation";
 
 const links = [
   { href: "/", label: "Home", key: "home" },
-  { href: "/enhance", label: "Platform", key: "platform" },
+  { href: "/explore", label: "Explore", key: "explore" },
+  { href: "/enhance", label: "Enhance", key: "enhance" },
+  { href: "/change-detection", label: "Change Detection", key: "change-detection" },
   { href: "/#technology", label: "Technology", key: "technology" },
   { href: "/#use-cases", label: "Use cases", key: "use-cases" },
 ];
@@ -16,7 +18,7 @@ export default function NavLinks() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [active, setActive] = useState(pathname === "/enhance" ? "platform" : "home");
+  const [active, setActive] = useState(pathname === "/enhance" ? "enhance" : pathname.slice(1) || "home");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -47,7 +49,7 @@ export default function NavLinks() {
 
   return (
     <div className={`nav-frame ${scrolled ? "nav-frame-scrolled" : ""}`}>
-      <nav className="hidden items-center gap-7 md:flex" aria-label="Primary navigation">
+      <nav className="hidden items-center gap-7 pl-3 md:flex" aria-label="Primary navigation">
         {links.map((link) => (
           <Link key={link.href} href={link.href} className={`nav-link ${active === link.key ? "nav-link-active" : ""}`} onClick={() => setActive(link.key)}>
             {link.label}

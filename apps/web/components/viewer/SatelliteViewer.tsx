@@ -49,7 +49,7 @@ export default function SatelliteViewer({ jobId }: Props) {
       <div
         ref={containerRef}
         className="relative overflow-hidden border border-border bg-secondary shadow-2xl cursor-col-resize select-none"
-        style={{ height: "420px" }}
+        style={{ height: "calc(100vh - 250px)", minHeight: "700px" }}
         onMouseMove={onMouseMove}
         onMouseDown={() => { dragging.current = true; }}
         onMouseUp={() => { dragging.current = false; }}
