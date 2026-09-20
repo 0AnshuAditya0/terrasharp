@@ -1,4 +1,4 @@
-# TerraSharp — Architecture
+# ClariX — Architecture
 
 ## Problem
 
@@ -9,7 +9,7 @@ imagery is needed: crop health monitoring, flood/disaster response, urban sprawl
 services (Google Maps, etc.) are not a substitute — they show a single static, often outdated
 snapshot, not a monitoring feed.
 
-TerraSharp closes this gap with a 4x super-resolution model that upscales Sentinel-2's 10m imagery
+ClariX closes this gap with a 4x super-resolution model that upscales Sentinel-2's 10m imagery
 to an effective 2.5m, using only the free, frequently-updated Sentinel-2 feed as input.
 
 ## System Overview

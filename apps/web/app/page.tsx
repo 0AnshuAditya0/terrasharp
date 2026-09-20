@@ -51,7 +51,7 @@ export default function HomePage() {
           <div data-reveal className="relative z-10 w-full max-w-4xl reveal-up">
             <h1 className="hero-wordmark -ml-1">
               <RevealText
-                text="TerraSharp"
+                text="ClariX"
                 fontSize="text-[clamp(2.8rem,8.5vw,6.8rem)]"
                 textColor="text-white"
                 overlayColor="text-[#8de6ff]"
@@ -98,7 +98,7 @@ export default function HomePage() {
             <p className="mt-8 max-w-md text-sm leading-7 text-[#b4d4e5]">
               Open satellite imagery is frequent, global, and free. But
               medium-resolution pixels flatten the details that make a landscape
-              actionable. TerraSharp restores that signal without losing the
+              actionable. ClariX restores that signal without losing the
               cadence of the source.
             </p>
           </div>

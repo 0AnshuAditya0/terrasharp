@@ -1,9 +1,9 @@
-# TerraSharp
+# ClariX
 
 **Turn 10-meter free satellite pixels into 2.5-meter intelligence.**
 
-TerraSharp is a 4x super-resolution pipeline purpose-built for Sentinel-2 imagery — free, global,
-revisited every 5 days, but capped at 10m resolution. TerraSharp upscales it to an effective 2.5m,
+ClariX is a 4x super-resolution pipeline purpose-built for Sentinel-2 imagery — free, global,
+revisited every 5 days, but capped at 10m resolution. ClariX upscales it to an effective 2.5m,
 with per-pixel uncertainty quantification, full spectral fidelity validation, and correct
 georeferencing preserved end to end.
 
@@ -11,11 +11,11 @@ Built for **Smart India Hackathon 2026** (Problem Statement PS-142).
 
 ---
 
-## Why TerraSharp
+## Why ClariX
 
 Free satellite imagery and high-resolution imagery have historically been a trade-off: Sentinel-2
 gives you frequency and cost-freedom at 10m resolution; commercial providers give you sharpness at
-a price and schedule most use cases can't sustain. TerraSharp closes that gap with a trained deep
+a price and schedule most use cases can't sustain. ClariX closes that gap with a trained deep
 learning model instead of an expensive satellite tasking request.
 
 - **Multi-spectral, not RGB** — processes all 4 optical bands (B02, B03, B04, B08/NIR) together,

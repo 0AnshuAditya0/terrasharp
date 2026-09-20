@@ -1,4 +1,4 @@
-# TerraSharp — SIH Pitch
+# ClariX — SIH Pitch
 
 ## The One-Liner
 **Turn 10-meter free satellite pixels into 2.5-meter intelligence — without waiting for expensive
@@ -15,7 +15,7 @@ tasking a high-res satellite is expensive and not repeatable at national scale.
 force you to pick one.**
 
 ## The Solution
-TerraSharp is a 4x super-resolution pipeline purpose-built for Sentinel-2: upload or fetch imagery
+ClariX is a 4x super-resolution pipeline purpose-built for Sentinel-2: upload or fetch imagery
 directly from Copernicus, get back 2.5m-equivalent resolution — with the same 5-day revisit cadence
 you started with, at zero marginal imagery cost.
 
@@ -81,7 +81,7 @@ estimation — acceptable for interactive/on-demand use. GPU deployment or model
 (INT8 export is already implemented) would bring this well under 5 seconds for production scale.
 
 **"Why should I trust an AI-enhanced satellite image for [agriculture/disaster response/planning]?"**
-You shouldn't trust it *blindly* — that's exactly why the uncertainty map exists. Frame TerraSharp
+You shouldn't trust it *blindly* — that's exactly why the uncertainty map exists. Frame ClariX
 as a triage/prioritization tool (which areas need a closer look, where has land use likely changed)
 rather than a replacement for ground truth or high-res commercial tasking in high-stakes final
 decisions.

@@ -16,7 +16,7 @@ interface RevealTextProps {
 }
 
 export function RevealText({
-  text = "TerraSharp",
+  text = "ClariX",
   textColor = "text-white",
   overlayColor = "text-[#8de6ff]",
   fontSize = "text-[clamp(2.8rem,8.5vw,6.8rem)]",
