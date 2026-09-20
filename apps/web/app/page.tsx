@@ -11,28 +11,28 @@ import HeroBackground from "@/components/home/HeroBackground";
 
 const applications = [
   {
-    number: "01",
+    number: "01: Source(Kansas, USA)",
     title: "Crop intelligence",
     description:
       "See field boundaries, irrigation patterns, and crop stress at the parcel scale.",
     image: "/applications-crops.png",
   },
   {
-    number: "02",
+    number: "02: Source(Barcelona, Spain)",
     title: "Urban mapping",
     description:
       "Read streets, rooftops, and settlement growth with a sharper spatial signal.",
     image: "/applications-urban.png",
   },
   {
-    number: "03",
+    number: "03: Source(Lousiana, USA)",
     title: "Disaster response",
     description:
       "Trace flood edges and damage extents when every hour changes the outcome.",
     image: "/applications-disaster.png",
   },
   {
-    number: "04",
+    number: "04: Source(Baja California, Mexico)",
     title: "Coastal change",
     description:
       "Track shorelines, erosion, and water boundaries through consistent time-series detail.",

@@ -11,6 +11,9 @@ const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat
 export const metadata: Metadata = {
   title: "ClariX - Sharper Earth. More Signal.",
   description: "AI-powered super-resolution for Sentinel-2 imagery, transforming medium-resolution observations into sharper Earth intelligence.",
+  icons: {
+    icon: "/fav.png",
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -21,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <header className="site-header">
             <div className="mx-auto flex h-[76px] max-w-[1600px] items-center justify-between px-6 lg:px-10">
               <a href="/" className="flex items-center">
-                <img src="/content.webp" alt="ClariX" className="h-10 w-auto object-contain sm:h-12" />
+                <img src="/content.png" alt="ClariX" className="h-10 w-auto object-contain sm:h-12" />
               </a>
               <NavLinks />
             </div>

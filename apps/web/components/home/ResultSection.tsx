@@ -24,7 +24,7 @@ export default function ResultSection() {
           </p>
         </div>
         <div
-          className="relative mt-10 aspect-[4/3] min-h-[240px] w-full sm:mt-12 sm:aspect-[16/8.2] sm:min-h-[300px] select-none overflow-hidden border border-[#72c8ee]/35 bg-[#061323] touch-none"
+          className="relative mx-auto mt-10 aspect-[4/3] min-h-[240px] w-[96%] sm:mt-12 sm:aspect-[16/6] sm:min-h-[300px] select-none overflow-hidden border border-[#72c8ee]/35 bg-[#061323] touch-none"
           onPointerMove={(e) => {
             if (e.buttons === 1) updateSplit(e.clientX, e.currentTarget);
           }}
@@ -71,7 +71,7 @@ export default function ResultSection() {
             Raw input · 10m
           </div>
           <div className="absolute bottom-5 right-5 border border-[#18c8c1]/45 bg-[#061323]/80 px-3 py-2 font-mono text-[9px] uppercase tracking-[.14em] text-[#8de6ff]">
-            Reconstructed · &lt;4m
+            Source: Italy | Reconstructed · &lt;4m
           </div>
         </div>
       </div>
