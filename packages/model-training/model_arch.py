@@ -1,7 +1,26 @@
 import math
 import torch
 import torch.nn as nn
+import torch.nn.init as init
 import torch.nn.functional as F
+
+
+def icnr_init(conv_layer, scale=4, init=nn.init.kaiming_normal_):
+    """
+    Applies ICNR initialization to a Conv2d layer preceding a PixelShuffle.
+    conv_layer: The Conv2d layer with out_channels = C * (scale**2)
+    scale: The upscale factor (4 in our case)
+    """
+    ni, nf, h, w = conv_layer.weight.shape
+    ni2 = int(ni / (scale**2))
+
+    k = init(torch.zeros([ni2, nf, h, w])).transpose(0, 1)
+    k = k.contiguous().view(ni2, nf, -1)
+
+    k = k.repeat(1, 1, scale**2)
+    k = k.contiguous().view([nf, ni, h, w]).transpose(0, 1)
+
+    conv_layer.weight.data.copy_(k)
 
 
 def window_partition(x, window_size: int):
@@ -264,6 +283,9 @@ class SwinIRLight(nn.Module):
             self.upsample = nn.Identity()
 
         self.conv_last = nn.Conv2d(embed_dim, out_chans, 3, 1, 1)
+
+        if isinstance(self.upsample, nn.Sequential) and len(self.upsample) > 0:
+            icnr_init(self.upsample[0], scale=self.upscale)
 
     def forward(self, x):
         _, _, H, W = x.shape

@@ -9,7 +9,7 @@ const anta = Anta({ subsets: ["latin"], variable: "--font-anta", weight: "400" }
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat", weight: ["400", "500", "600", "700", "800", "900"] });
 
 export const metadata: Metadata = {
-  title: "TerraSharp - Sharper Earth. More Signal.",
+  title: "ClariX - Sharper Earth. More Signal.",
   description: "AI-powered super-resolution for Sentinel-2 imagery, transforming medium-resolution observations into sharper Earth intelligence.",
 };
 
@@ -21,13 +21,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <header className="site-header">
             <div className="mx-auto flex h-[76px] max-w-[1600px] items-center justify-between px-6 lg:px-10">
               <a href="/" className="flex items-center">
-                <img src="/content.webp" alt="TerraSharp" className="h-10 w-auto object-contain sm:h-12" />
+                <img src="/content.webp" alt="ClariX" className="h-10 w-auto object-contain sm:h-12" />
               </a>
               <NavLinks />
             </div>
           </header>
           <main className="min-h-screen">{children}</main>
-          <footer className="border-t border-border bg-background px-6 py-8 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">TerraSharp · Sentinel-2 super-resolution</footer>
+          <footer className="border-t border-border bg-background px-6 py-8 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">ClariX · Sentinel-2 super-resolution</footer>
           <BackToTop />
         </MotionProvider>
       </body>

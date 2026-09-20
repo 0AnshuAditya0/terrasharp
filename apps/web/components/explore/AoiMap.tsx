@@ -90,14 +90,14 @@ function DrawControl({ onBoundsChange, onErrorChange }: AoiMapProps) {
       const result = validateLayer(layer);
 
       if (!result.valid) {
-        onErrorChangeRef.current?.(result.error);
+        onErrorChangeRef.current?.(result.error ?? null);
         onBoundsChangeRef.current(null);
         return;
       }
 
       featureGroup.addLayer(layer);
       onErrorChangeRef.current?.(null);
-      onBoundsChangeRef.current(result.bounds);
+      onBoundsChangeRef.current(result.bounds ?? null);
     };
 
     const handleEdited = (event: L.LeafletEvent) => {
@@ -106,12 +106,12 @@ function DrawControl({ onBoundsChange, onErrorChange }: AoiMapProps) {
         const result = validateLayer(layer as L.Rectangle);
         if (!result.valid) {
           featureGroup.removeLayer(layer);
-          onErrorChangeRef.current?.(result.error);
+          onErrorChangeRef.current?.(result.error ?? null);
           onBoundsChangeRef.current(null);
         } else {
           foundValid = true;
           onErrorChangeRef.current?.(null);
-          onBoundsChangeRef.current(result.bounds);
+          onBoundsChangeRef.current(result.bounds ?? null);
         }
       });
       if (!foundValid && featureGroup.getLayers().length === 0) {

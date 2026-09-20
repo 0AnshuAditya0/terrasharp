@@ -45,7 +45,7 @@ export default function ResultSection() {
         >
           <img
             src="/samples/preview_after.png"
-            alt="TerraSharp super-resolution output"
+            alt="ClariX super-resolution output"
             className="absolute inset-0 h-full w-full object-cover"
           />
           <div

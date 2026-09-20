@@ -28,7 +28,7 @@ from src.edge_metrics import get_edge_maps
 from src.geotiff_utils import read_geotiff, write_geotiff, write_uncertainty_geotiff
 from src.copernicus import CopernicusClient
 
-app = FastAPI(title="TerraSharp Inference API", version="1.0.0")
+app = FastAPI(title="ClariX Inference API", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
